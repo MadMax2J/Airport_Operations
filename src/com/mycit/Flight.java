@@ -1,5 +1,6 @@
 package com.mycit;
 
+
 import java.util.ArrayList;
 
 /**Flight object definition
@@ -78,6 +79,13 @@ public class Flight {
 
     public void setPriority(boolean priority) {
         this.priority = priority;
+    }
+
+
+    public String toString(){
+        int numberOfTabs = 30 / this.getAirline().length();
+        return this.getFlightNumber() + "\t\t\t" + this.getAirline() + new String(new char[numberOfTabs]).replace("\0", "\t") + this.getDestination() + "\t\t\t\t" + String.valueOf(this.passengerManifest.size()) + "\n";
+        //// Y@es, this is the most convoluted toString method I ever wrote!
     }
 
 }

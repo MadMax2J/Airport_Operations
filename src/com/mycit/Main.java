@@ -31,6 +31,8 @@ public class Main {
         scheduledFlights.addFlight(new Flight("EI223", "Aer Lingus", 20, "STN"));
         scheduledFlights.addFlight(new Flight("EI323", "Aer Lingus", 20, "LHR"));
 
+        System.out.println(scheduledFlights.toString());
+        System.out.println("\n\n\n\n");
 
         // 2.
 
@@ -40,6 +42,8 @@ public class Main {
         // 3.
         scheduledFlights.findFlight("EI123").addPassenger(outboundPassengers.pop());
         scheduledFlights.findFlight("EI223").addPassenger(outboundPassengers.pop());
+        System.out.println(scheduledFlights.toString());
+        System.out.println("\n\n\n\n");
 
         // 4 & 5
         scheduledFlights.clearFlightForPushBackTaxiAndHold("EI123");
@@ -66,6 +70,9 @@ public class Main {
         scheduledFlights.addFlight(new Flight("RA456", "Ryanair", 20, "LGW"));
         scheduledFlights.addFlight(new Flight("BA747", "British Airways", 20, "AMS"));
         outboundPassengers.generatePassengers();
+
+        System.out.println(scheduledFlights.toString());
+        System.out.println("\n\n\n\n");
 
         // 12.
         scheduledFlights.cancelFlight("EI323");

@@ -72,4 +72,20 @@ public class ScheduledFlights implements ScheduledFlightsInterface {
     public int getNumberOfFlightsAtGate() {
         return 0;
     }
+
+    public String toString(){
+        String result = ("Flights at Gate...\n");
+        result = result + ("Flight Number\tAirline\t\t\t\tDestination\t\tNumber of Passengers\n");
+        if(!isFlightsEmpty()){
+            FlightNode curr = head;
+            do{
+                result = result + curr.getFlight().toString();
+                curr = curr.getNextNode();
+            }while (curr!=null);
+        }
+
+        return result;
+    }
+
+
 }
