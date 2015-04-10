@@ -32,4 +32,8 @@ public class Passenger {
     public void setOtherDetails(String otherDetails) {
         this.otherDetails = otherDetails;
     }
+
+    public String toString(){
+        return "Passenger Name: " + this.passengerName + ", Passenger Details: " + this.otherDetails + "!";
+    }
 }

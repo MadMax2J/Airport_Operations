@@ -2,10 +2,10 @@ package com.mycit;
 
 import java.util.ArrayList;
 
-/**Application - Data Interface Specification
+/**Scheduled Flights Interface Specification
  * Created by jbyrne on 10/04/2015.
  */
-public interface AppDataInterface {
+public interface ScheduledFlightsInterface {
 
     // 1. Add a Flight Object to the Data Structure.
     public void addFlight(Flight flight);
@@ -25,18 +25,6 @@ public interface AppDataInterface {
     public void clearFlightForPushBackTaxiAndHold(String flightNumber) throws FlightNotFoundException;
 
 
-    // 5. Clear a flight for Take-off.
-    // Has the effect of moving the flight Object from
-    // the flightTaxiAndHoldQueue to the flightClearedForTakeOff data structure, which
-    // represents the runway and has a size of [1].
-    public void clearFlightForTakeoff(String flightNumber) throws FlightNotFoundException, RunwayOccupiedException;
-
-
-    // 6. Process a flight departure.
-    // Pops the Flight object from the Runway flightClearedForTakeOff data structure
-    public void flightDeparts(String flightNumber) throws FlightNotFoundException;
-
-
     // 7. Returns a Flight given the Flight Number
     public Flight findFlight(String flightNumber) throws FlightNotFoundException;
 
@@ -46,7 +34,7 @@ public interface AppDataInterface {
 
 
     // 9. Generates additional passengers with Random details.
-    public ArrayList<Passenger> recieveAdditionalPassengers();
+    //public ArrayList<Passenger> recieveAdditionalPassengers();
 
 
     //// Fairly generic functions
@@ -57,17 +45,13 @@ public interface AppDataInterface {
     // Determines the number of Scheduled Flights at Gate.
     public int getNumberOfFlightsAtGate();
 
-    // Determines the number of Flights Outbound Taxi to Runway.
-    public int getNumberOfFlightsOutboundTaxi();
 
-    // Determines if the Runway is available
-    public boolean isRunwayEmpty();
 
 
     // Determines whether the list of Passengers in the Terminal is empty.
-    public boolean isTerminalEmpty();
+    //public boolean isTerminalEmpty();
 
-    public int getNumberOfPassengers();
+   // public int getNumberOfPassengers();
 
 
 

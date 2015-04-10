@@ -25,6 +25,10 @@ public class Flight {
     }
 
 
+    public void addPassenger(Passenger newPassenger){
+        passengerManifest.add(newPassenger);
+    }
+
 
     ////Getters and Setters
 
