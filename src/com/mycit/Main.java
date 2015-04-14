@@ -20,6 +20,7 @@ public class Main {
         *   13. Graceful exit
         */
 
+        //GenericDataStructure<Flight> scheduledFlights = new GenericDataStructure<Flight>();
         ScheduledFlights scheduledFlights = new ScheduledFlights();
         OutboundPassengers outboundPassengers = new OutboundPassengers();   //This can be a Stack
         TaxiAndHoldQueue taxiAndHoldQueue = new TaxiAndHoldQueue();

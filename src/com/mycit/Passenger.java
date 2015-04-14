@@ -6,12 +6,13 @@ package com.mycit;
 public class Passenger {
 
     private String passengerName;
-    private String otherDetails;
+    private String destinationCode;
+    private String destinationCity;
 
-    public Passenger(String passengerName, String otherDetails){
+    public Passenger(String passengerName, String destinationCode, String destinationCity){
         this.passengerName = passengerName;
-        this.otherDetails = otherDetails;
-
+        this.destinationCode = destinationCode;
+        this.destinationCity = destinationCity;
     }
 
 
@@ -25,15 +26,23 @@ public class Passenger {
         this.passengerName = passengerName;
     }
 
-    public String getOtherDetails() {
-        return otherDetails;
+    public String getDestinationCode() {
+        return destinationCode;
     }
 
-    public void setOtherDetails(String otherDetails) {
-        this.otherDetails = otherDetails;
+    public void setDestinationCode(String destinationCode) {
+        this.destinationCode = destinationCode;
+    }
+
+    public String getDestinationCity() {
+        return destinationCity;
+    }
+
+    public void setDestinationCity(String destinationCity) {
+        this.destinationCity = destinationCity;
     }
 
     public String toString(){
-        return "Passenger Name: " + this.passengerName + ", Passenger Details: " + this.otherDetails + "!";
+        return "Passenger Name: " + getPassengerName() + ",\tPassenger Destination: " + getDestinationCode() + "\t" + getDestinationCity();
     }
 }
